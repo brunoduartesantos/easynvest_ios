@@ -70,6 +70,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C3C759011FD305C400AED5AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */,
+				C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C3CD2C941FD1A87A004C9B01 = {
 			isa = PBXGroup;
 			children = (
@@ -93,8 +102,7 @@
 		C3CD2C9F1FD1A87A004C9B01 /* Easynvest iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */,
-				C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */,
+				C3C759011FD305C400AED5AE /* Controllers */,
 				C3F766331FD22B2200E5122F /* Support Files */,
 			);
 			path = "Easynvest iOS";
