@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class Calculator: NSObject {
     var investedAmount: Float
@@ -16,5 +17,36 @@ class Calculator: NSObject {
         self.investedAmount = investedAmount
         self.rate = rate
         self.maturityDate = maturityDate
+    }
+    // MARK: Requests
+    func simulate(completion: () -> Void) {
+        var url = URLComponents(string: "https://easynvestsimulatorcalcapi.azurewebsites.net/calculator/simulate")!
+        url.queryItems = [
+            URLQueryItem(name: "investedAmount", value: String(investedAmount)),
+            URLQueryItem(name: "index", value: "CDI"),
+            URLQueryItem(name: "rate", value: String(rate)),
+            URLQueryItem(name: "isTaxFree", value: "false"),
+            URLQueryItem(name: "maturityDate", value: self.formatDate(maturityDate))
+        ]
+        let request = URLRequest(url: url.url!)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    // Convert the data to JSON
+                    let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+    }
+    // MARK: Additional Helpers
+    func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
     }
 }
