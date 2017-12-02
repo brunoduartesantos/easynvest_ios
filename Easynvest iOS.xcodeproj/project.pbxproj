@@ -10,10 +10,10 @@
 		7F50431AAC054AA0A9F41FF6 /* Pods_Easynvest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172918834609D2A89D01388D /* Pods_Easynvest_iOS.framework */; };
 		C3C759061FD30DB600AED5AE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759041FD307EC00AED5AE /* TextField.swift */; };
 		C3C759081FD317BA00AED5AE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759071FD317BA00AED5AE /* Button.swift */; };
+		C3C7590A1FD31E6000AED5AE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759091FD31E6000AED5AE /* Calculator.swift */; };
 		C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */; };
 		C3CD2CA81FD1A87A004C9B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CD2CA71FD1A87A004C9B01 /* Assets.xcassets */; };
 		C3CD2CAB1FD1A87A004C9B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD2CA91FD1A87A004C9B01 /* LaunchScreen.storyboard */; };
-		C3CD2CB61FD1A87A004C9B01 /* EasynvestiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD2CB51FD1A87A004C9B01 /* EasynvestiOSTests.swift */; };
 		C3F766301FD2285C00E5122F /* SimulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */; };
 		C3F766311FD2285C00E5122F /* SimulateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */; };
 /* End PBXBuildFile section */
@@ -34,13 +34,13 @@
 		B10AFB3920286E210E9CE595 /* Pods-Easynvest iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C759041FD307EC00AED5AE /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		C3C759071FD317BA00AED5AE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		C3C759091FD31E6000AED5AE /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		C3CD2C9D1FD1A87A004C9B01 /* Easynvest iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easynvest iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3CD2CA71FD1A87A004C9B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CD2CAA1FD1A87A004C9B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3CD2CAC1FD1A87A004C9B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CD2CB11FD1A87A004C9B01 /* Easynvest iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easynvest iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3CD2CB51FD1A87A004C9B01 /* EasynvestiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasynvestiOSTests.swift; sourceTree = "<group>"; };
 		C3CD2CB71FD1A87A004C9B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateViewController.swift; sourceTree = "<group>"; };
 		C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimulateViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +92,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C3C7590B1FD31E6500AED5AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3C759091FD31E6000AED5AE /* Calculator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C3CD2C941FD1A87A004C9B01 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +123,7 @@
 		C3CD2C9F1FD1A87A004C9B01 /* Easynvest iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C3C7590B1FD31E6500AED5AE /* Models */,
 				C3C759031FD3078500AED5AE /* Views */,
 				C3C759011FD305C400AED5AE /* Controllers */,
 				C3F766331FD22B2200E5122F /* Support Files */,
@@ -125,7 +134,6 @@
 		C3CD2CB41FD1A87A004C9B01 /* Easynvest iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				C3CD2CB51FD1A87A004C9B01 /* EasynvestiOSTests.swift */,
 				C3CD2CB71FD1A87A004C9B01 /* Info.plist */,
 			);
 			path = "Easynvest iOSTests";
@@ -324,6 +332,7 @@
 				C3C759061FD30DB600AED5AE /* TextField.swift in Sources */,
 				C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */,
 				C3F766301FD2285C00E5122F /* SimulateViewController.swift in Sources */,
+				C3C7590A1FD31E6000AED5AE /* Calculator.swift in Sources */,
 				C3C759081FD317BA00AED5AE /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CD2CB61FD1A87A004C9B01 /* EasynvestiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
