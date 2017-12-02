@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F50431AAC054AA0A9F41FF6 /* Pods_Easynvest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172918834609D2A89D01388D /* Pods_Easynvest_iOS.framework */; };
 		C3C759061FD30DB600AED5AE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759041FD307EC00AED5AE /* TextField.swift */; };
+		C3C759081FD317BA00AED5AE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759071FD317BA00AED5AE /* Button.swift */; };
 		C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */; };
 		C3CD2CA81FD1A87A004C9B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CD2CA71FD1A87A004C9B01 /* Assets.xcassets */; };
 		C3CD2CAB1FD1A87A004C9B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CD2CA91FD1A87A004C9B01 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		92C06F5624B9A498AA43EFDE /* Pods-Easynvest iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B10AFB3920286E210E9CE595 /* Pods-Easynvest iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C759041FD307EC00AED5AE /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		C3C759071FD317BA00AED5AE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		C3CD2C9D1FD1A87A004C9B01 /* Easynvest iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easynvest iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3CD2CA71FD1A87A004C9B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C3C759041FD307EC00AED5AE /* TextField.swift */,
+				C3C759071FD317BA00AED5AE /* Button.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				C3C759061FD30DB600AED5AE /* TextField.swift in Sources */,
 				C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */,
 				C3F766301FD2285C00E5122F /* SimulateViewController.swift in Sources */,
+				C3C759081FD317BA00AED5AE /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

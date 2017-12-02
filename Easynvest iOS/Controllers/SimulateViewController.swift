@@ -8,9 +8,17 @@
 import UIKit
 
 class SimulateViewController: UIViewController {
+    @IBOutlet weak var valueTextField: TextField!
+    @IBOutlet weak var expirationTextField: TextField!
+    @IBOutlet weak var percentageTextField: TextField!
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    // MARK: Additional Helpers
+    /// General changes for this controller
+    func setup() {
         self.title = "Simulador"
     }
 }

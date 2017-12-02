@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimulateViewController" customModule="Easynvest_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="expirationTextField" destination="kmS-3E-GYM" id="VCA-jj-zWo"/>
+                <outlet property="percentageTextField" destination="1Ou-t5-xId" id="zSR-Oi-vRg"/>
+                <outlet property="valueTextField" destination="KJi-Sg-W35" id="nCS-Dt-Icq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,43 +29,43 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto você gostaria de aplicar? *" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eik-xl-ZED">
-                                    <rect key="frame" x="20" y="173.5" width="335" height="16"/>
+                                    <rect key="frame" x="20" y="163.5" width="335" height="16"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual da data de vencimento do inverstimento? *" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYH-RF-bFQ">
-                                    <rect key="frame" x="20" y="261.5" width="335" height="16"/>
+                                    <rect key="frame" x="20" y="251.5" width="335" height="16"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o porcentual do CDI do investimento? *" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsZ-1D-9yJ">
-                                    <rect key="frame" x="20" y="349.5" width="335" height="16"/>
+                                    <rect key="frame" x="20" y="339.5" width="335" height="16"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJi-Sg-W35" customClass="TextField" customModule="Easynvest_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="199.5" width="335" height="32"/>
+                                    <rect key="frame" x="20" y="189.5" width="335" height="32"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dia/mês/ano" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmS-3E-GYM" customClass="TextField" customModule="Easynvest_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="287.5" width="335" height="32"/>
+                                    <rect key="frame" x="20" y="277.5" width="335" height="32"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="100%" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ou-t5-xId" customClass="TextField" customModule="Easynvest_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="375.5" width="335" height="32"/>
+                                    <rect key="frame" x="20" y="365.5" width="335" height="32"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-eN-WnT">
-                                    <rect key="frame" x="20" y="437.5" width="335" height="40"/>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-eN-WnT" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="427.5" width="335" height="40"/>
                                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Hd4-ZG-CeL"/>
@@ -82,7 +85,7 @@
                                 <constraint firstItem="8uY-eN-WnT" firstAttribute="top" secondItem="1Ou-t5-xId" secondAttribute="bottom" constant="30" id="A0l-Vn-vHy"/>
                                 <constraint firstItem="1Ou-t5-xId" firstAttribute="top" secondItem="ZsZ-1D-9yJ" secondAttribute="bottom" constant="10" id="CCh-px-j9p"/>
                                 <constraint firstItem="8uY-eN-WnT" firstAttribute="leading" secondItem="HHL-HF-mOf" secondAttribute="leading" constant="20" id="HQL-To-xLa"/>
-                                <constraint firstItem="kmS-3E-GYM" firstAttribute="centerY" secondItem="HHL-HF-mOf" secondAttribute="centerY" constant="-20" id="HhY-AO-IIm"/>
+                                <constraint firstItem="kmS-3E-GYM" firstAttribute="centerY" secondItem="HHL-HF-mOf" secondAttribute="centerY" constant="-30" id="HhY-AO-IIm"/>
                                 <constraint firstItem="nYH-RF-bFQ" firstAttribute="top" secondItem="KJi-Sg-W35" secondAttribute="bottom" constant="30" id="IPg-k6-DWj"/>
                                 <constraint firstItem="nYH-RF-bFQ" firstAttribute="leading" secondItem="HHL-HF-mOf" secondAttribute="leading" constant="20" id="JUz-9b-afe"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8uY-eN-WnT" secondAttribute="bottom" constant="10" id="Le8-lE-uep"/>
