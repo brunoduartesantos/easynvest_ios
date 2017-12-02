@@ -16,6 +16,11 @@ class SimulateViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    // MARK: User Interaction
+    @IBAction func simulate(_ sender: Any) {
+        let calculator = Calculator(investedAmount: 0.0, rate: 0.0, maturityDate: Date())
+        calculator.simulate(completion: nil)
+    }
     // MARK: Additional Helpers
     /// General changes for this controller
     func setup() {
