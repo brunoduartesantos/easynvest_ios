@@ -27,5 +27,12 @@ class SimulateViewController: UIViewController {
     func setup() {
         self.title = "Simulador"
         simulateButton.setEnabled(enabled: true)
+        valueTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    @objc
+    func textFieldDidChange(_ textField: UITextField) {
+        if let amountString = textField.text?.currencyInputFormatting() {
+            textField.text = amountString
+        }
     }
 }
