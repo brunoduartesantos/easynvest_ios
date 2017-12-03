@@ -25,7 +25,23 @@ class SimulateViewController: UIViewController {
     // MARK: User Interaction
 
     @IBAction func simulate(_ sender: Any) {
-        let calculator = Calculator(investedAmount: 0.0, rate: 0.0, maturityDate: Date())
+        guard let valueText = valueTextField.text, !valueText.isEmpty else {
+            return
+        }
+
+        guard let expirationText = expirationTextField.text, !expirationText.isEmpty else {
+            return
+        }
+
+        guard let percentageText = percentageTextField.text, !percentageText.isEmpty else {
+            return
+        }
+
+        let calculator = Calculator(
+            investedAmount: valueText,
+            rate: percentageText,
+            maturityDate: expirationText)
+
         calculator.simulate(completion: nil)
     }
 

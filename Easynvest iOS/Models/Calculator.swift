@@ -9,32 +9,31 @@ import UIKit
 import Foundation
 
 class Calculator: NSObject {
-    var investedAmount: Float
-    var rate: Float
-    var maturityDate: Date
+    var investedAmount: String
+    var rate: String
+    var maturityDate: String
+
     // MARK: Lifecycle
-    init(investedAmount: Float, rate: Float, maturityDate: Date) {
-        self.investedAmount = investedAmount
+
+    init(investedAmount: String, rate: String, maturityDate: String) {
+        self.investedAmount = investedAmount.formatToNumberString()
         self.rate = rate
-        self.maturityDate = maturityDate
+        self.maturityDate = maturityDate.formatToDateString()
     }
+
     // MARK: Requests
+
     func simulate(completion: (() -> Void)?) {
         var url = URLComponents(string: "https://api-simulator-calc.easynvest.com.br/calculator/simulate")!
+
         url.queryItems = [
-            URLQueryItem(name: "investedAmount", value: String(investedAmount)),
+            URLQueryItem(name: "investedAmount", value: investedAmount),
             URLQueryItem(name: "index", value: "CDI"),
-            URLQueryItem(name: "rate", value: String(rate)),
+            URLQueryItem(name: "rate", value: rate),
             URLQueryItem(name: "isTaxFree", value: "false"),
-            URLQueryItem(name: "maturityDate", value: self.formatDate(maturityDate))
+            URLQueryItem(name: "maturityDate", value: maturityDate)
         ]
-//        url.queryItems = [
-//            URLQueryItem(name: "investedAmount", value: "32323.0"),
-//            URLQueryItem(name: "index", value: "CDI"),
-//            URLQueryItem(name: "rate", value: "123"),
-//            URLQueryItem(name: "isTaxFree", value: "false"),
-//            URLQueryItem(name: "maturityDate", value: "2023-03-03")
-//        ]
+
         let request = URLRequest(url: url.url!)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
@@ -49,11 +48,5 @@ class Calculator: NSObject {
             }
         }
         task.resume()
-    }
-    // MARK: Additional Helpers
-    func formatDate(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: date)
     }
 }

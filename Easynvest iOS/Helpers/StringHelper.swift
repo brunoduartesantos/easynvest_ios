@@ -13,7 +13,8 @@ extension String {
         do {
             var number: NSNumber!
             let formatter = NumberFormatter()
-            formatter.numberStyle = .currencyAccounting
+            formatter.numberStyle = .currency
+            formatter.locale = Locale(identifier: "pt-BR")
             formatter.currencySymbol = "R$"
             formatter.maximumFractionDigits = 2
             formatter.minimumFractionDigits = 2
@@ -35,5 +36,34 @@ extension String {
         } catch {
             return ""
         }
+    }
+
+    /// Format a string from this format "dd/MM/yyyy" to this "yyyy-MM-dd" format
+    func formatToDateString() -> String {
+        if self.isEmpty {
+            return ""
+        }
+
+        let stringArray = self.components(separatedBy: "/")
+
+        if stringArray.count < 3 {
+            return ""
+        }
+
+        let formattedString = "\(stringArray[2])-\(stringArray[1])-\(stringArray[0])"
+        return formattedString
+    }
+
+    /// Format a string from money to number format (0000.00)
+    func formatToNumberString() -> String {
+        if self.isEmpty {
+            return ""
+        }
+
+        var newString = self.replacingOccurrences(of: ".", with: "")
+        newString = newString.replacingOccurrences(of: ",", with: ".")
+        newString = newString.replacingOccurrences(of: "R$", with: "")
+
+        return newString
     }
 }
