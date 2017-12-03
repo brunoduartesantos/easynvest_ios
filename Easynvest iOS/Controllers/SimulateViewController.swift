@@ -22,6 +22,12 @@ class SimulateViewController: UIViewController {
         let calculator = Calculator(investedAmount: 0.0, rate: 0.0, maturityDate: Date())
         calculator.simulate(completion: nil)
     }
+    @IBAction func textFieldEditing(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(self.datePickerValueChanged(_:)), for: .valueChanged)
+    }
     // MARK: Additional Helpers
     /// General changes for this controller
     func setup() {
@@ -34,5 +40,11 @@ class SimulateViewController: UIViewController {
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }
+    }
+    @objc
+    func datePickerValueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        expirationTextField.text = dateFormatter.string(from: sender.date)
     }
 }
