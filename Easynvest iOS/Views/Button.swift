@@ -11,6 +11,7 @@ class Button: UIButton {
     override func draw(_ rect: CGRect) {
         layer.cornerRadius = frame.size.height / 2
     }
+
     func setEnabled(enabled: Bool) {
         isEnabled = enabled
         if enabled {
