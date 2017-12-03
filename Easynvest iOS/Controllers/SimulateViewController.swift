@@ -25,24 +25,24 @@ class SimulateViewController: UIViewController {
     // MARK: User Interaction
 
     @IBAction func simulate(_ sender: Any) {
-        guard let valueText = valueTextField.text, !valueText.isEmpty else {
-            return
-        }
+        guard let valueText = valueTextField.text, !valueText.isEmpty else { return }
+        guard let expirationText = expirationTextField.text, !expirationText.isEmpty else { return }
+        guard let percentageText = percentageTextField.text, !percentageText.isEmpty else { return }
 
-        guard let expirationText = expirationTextField.text, !expirationText.isEmpty else {
-            return
-        }
+        guard let investedAmount = Float(valueText.formatToNumberString()) else { return }
+        let maturityDate = expirationText.formatToDateString()
+        guard let rate = Float(percentageText) else { return }
 
-        guard let percentageText = percentageTextField.text, !percentageText.isEmpty else {
-            return
-        }
+        var investment = Investment(
+            investedAmount: investedAmount,
+            yearlyInterestRate: 0,
+            maturityTotalDays: 0,
+            maturityBusinessDays: 0,
+            maturityDate: maturityDate,
+            rate: rate,
+            isTaxFree: false)
 
-        let calculator = Calculator(
-            investedAmount: valueText,
-            rate: percentageText,
-            maturityDate: expirationText)
-
-        calculator.simulate(completion: nil)
+        investment.simulate(completion: nil)
     }
 
     @IBAction func textFieldEditingDidBegin(_ sender: TextField) {
