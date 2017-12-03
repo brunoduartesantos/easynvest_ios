@@ -40,7 +40,7 @@ class Calculator: NSObject {
             if let data = data {
                 do {
                     // Convert the data to JSON
-                    let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                    let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                 } catch let error as NSError {
                     print(error.localizedDescription)
                 }

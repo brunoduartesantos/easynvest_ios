@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let simulateViewController = SimulateViewController()
         let navigationController = UINavigationController(rootViewController: simulateViewController)
-        navigationController.navigationBar.prefersLargeTitles = true
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

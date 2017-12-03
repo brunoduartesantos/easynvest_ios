@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="expirationTextField" destination="kmS-3E-GYM" id="VCA-jj-zWo"/>
                 <outlet property="percentageTextField" destination="1Ou-t5-xId" id="zSR-Oi-vRg"/>
+                <outlet property="scrollView" destination="CIf-dx-AOW" id="DtX-7e-nIB"/>
                 <outlet property="simulateButton" destination="8uY-eN-WnT" id="Zuz-tX-O7D"/>
                 <outlet property="valueTextField" destination="KJi-Sg-W35" id="nCS-Dt-Icq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -52,6 +53,9 @@
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                    <connections>
+                                        <action selector="textFieldEditingDidBegin:" destination="-1" eventType="editingDidBegin" id="uRH-36-str"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dia/mês/ano" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmS-3E-GYM" customClass="TextField" customModule="Easynvest_iOS" customModuleProvider="target">
                                     <rect key="frame" x="20" y="277.5" width="335" height="32"/>
@@ -59,14 +63,17 @@
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     <connections>
-                                        <action selector="textFieldEditing:" destination="-1" eventType="editingDidBegin" id="slS-MH-cPQ"/>
+                                        <action selector="textFieldEditingDidBegin:" destination="-1" eventType="editingDidBegin" id="sbQ-ka-ckf"/>
                                     </connections>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="100%" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ou-t5-xId" customClass="TextField" customModule="Easynvest_iOS" customModuleProvider="target">
                                     <rect key="frame" x="20" y="365.5" width="335" height="32"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                    <connections>
+                                        <action selector="textFieldEditingDidBegin:" destination="-1" eventType="editingDidBegin" id="dSc-Fy-G08"/>
+                                    </connections>
                                 </textField>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-eN-WnT" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
                                     <rect key="frame" x="20" y="427.5" width="335" height="40"/>
