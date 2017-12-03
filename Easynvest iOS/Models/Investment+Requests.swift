@@ -8,7 +8,11 @@
 import Foundation
 
 extension Investment {
-    mutating func simulate(completion: (() -> Void)?) {
+    /// Makes a server request to simulate the investment
+    ///
+    /// - Parameter completion: Returns a "Calculator" object with all results,
+    ///                         but if request fails, the object will be nil.
+    mutating func simulate(completion: ((_ calculator: Calculator?) -> Void)?) {
         var url = URLComponents(string: "https://api-simulator-calc.easynvest.com.br/calculator/simulate")!
 
         url.queryItems = [
@@ -20,15 +24,18 @@ extension Investment {
         ]
 
         let request = URLRequest(url: url.url!)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let data = data {
                 do {
                     let calculator = try JSONDecoder().decode(Calculator.self, from: data)
+                    completion?(calculator)
                 } catch let error as NSError {
                     print(error.localizedDescription)
+                    completion?(nil)
                 }
             } else if let error = error {
                 print(error.localizedDescription)
+                completion?(nil)
             }
         }
         task.resume()
