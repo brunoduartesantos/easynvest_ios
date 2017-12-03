@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="expirationTextField" destination="kmS-3E-GYM" id="VCA-jj-zWo"/>
                 <outlet property="percentageTextField" destination="1Ou-t5-xId" id="zSR-Oi-vRg"/>
+                <outlet property="simulateButton" destination="8uY-eN-WnT" id="Zuz-tX-O7D"/>
                 <outlet property="valueTextField" destination="KJi-Sg-W35" id="nCS-Dt-Icq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -64,9 +65,9 @@
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 </textField>
-                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-eN-WnT" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-eN-WnT" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
                                     <rect key="frame" x="20" y="427.5" width="335" height="40"/>
-                                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.12549019610000001" green="0.78039215689999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Hd4-ZG-CeL"/>
                                     </constraints>

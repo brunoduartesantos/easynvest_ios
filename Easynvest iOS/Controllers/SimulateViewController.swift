@@ -11,6 +11,7 @@ class SimulateViewController: UIViewController {
     @IBOutlet weak var valueTextField: TextField!
     @IBOutlet weak var expirationTextField: TextField!
     @IBOutlet weak var percentageTextField: TextField!
+    @IBOutlet weak var simulateButton: Button!
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +26,6 @@ class SimulateViewController: UIViewController {
     /// General changes for this controller
     func setup() {
         self.title = "Simulador"
+        simulateButton.setEnabled(enabled: true)
     }
 }
