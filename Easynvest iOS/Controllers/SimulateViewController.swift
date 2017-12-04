@@ -8,12 +8,15 @@
 import UIKit
 
 class SimulateViewController: UIViewController {
-    fileprivate var currentTextField: TextField?
     @IBOutlet fileprivate weak var valueTextField: TextField!
     @IBOutlet fileprivate weak var expirationTextField: TextField!
     @IBOutlet fileprivate weak var percentageTextField: TextField!
     @IBOutlet fileprivate weak var simulateButton: Button!
     @IBOutlet fileprivate weak var scrollView: UIScrollView!
+    @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var loadingView: UIView!
+
+    fileprivate var currentTextField: TextField?
 
     // MARK: View Lifecycle
 
@@ -42,11 +45,16 @@ class SimulateViewController: UIViewController {
             rate: rate,
             isTaxFree: false)
 
-        investment.simulate { (calculator) in
-            guard let calculator = calculator else { return }
+        startLoading()
 
-            let resultController = ResultsViewController(calculator: calculator)
-            self.navigationController?.pushViewController(resultController, animated: true)
+        investment.simulate { (calculator) in
+            DispatchQueue.main.async(execute: {
+                self.stopLoading()
+                guard let calculator = calculator else { return }
+
+                let resultController = ResultsViewController(calculator: calculator)
+                self.navigationController?.pushViewController(resultController, animated: true)
+            })
         }
     }
 
@@ -59,9 +67,11 @@ class SimulateViewController: UIViewController {
     /// General changes for this controller
     func setup() {
         self.title = "Simulador"
+
         simulateButton.setEnabled(enabled: true)
         setupDatePickerKeyboard()
         valueTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.keyBoardDidChangeFrame(notification:)),
@@ -72,6 +82,22 @@ class SimulateViewController: UIViewController {
             selector: #selector(self.keyBoardDidHide(notification:)),
             name: .UIKeyboardDidHide,
             object: nil)
+    }
+
+    func startLoading() {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+
+        UIView.animate(withDuration: 0.2) {
+            self.view.bringSubview(toFront: self.loadingView)
+            self.loadingView.alpha = 1
+        }
+    }
+
+    func stopLoading() {
+        activityIndicator.stopAnimating()
+        view.sendSubview(toBack: self.loadingView)
+        loadingView.alpha = 0
     }
 
     @objc

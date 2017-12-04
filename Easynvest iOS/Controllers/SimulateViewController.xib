@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimulateViewController" customModule="Easynvest_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="hXb-13-NMx" id="xR9-U7-axj"/>
                 <outlet property="expirationTextField" destination="kmS-3E-GYM" id="VCA-jj-zWo"/>
+                <outlet property="loadingView" destination="VPR-r8-P1f" id="jR5-oL-80x"/>
                 <outlet property="percentageTextField" destination="1Ou-t5-xId" id="zSR-Oi-vRg"/>
                 <outlet property="scrollView" destination="CIf-dx-AOW" id="DtX-7e-nIB"/>
                 <outlet property="simulateButton" destination="8uY-eN-WnT" id="Zuz-tX-O7D"/>
@@ -24,6 +26,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPR-r8-P1f">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hXb-13-NMx">
+                            <rect key="frame" x="169" y="305" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="37" id="DuJ-ma-PRP"/>
+                                <constraint firstAttribute="height" constant="37" id="uWS-L3-ujz"/>
+                            </constraints>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="hXb-13-NMx" firstAttribute="centerY" secondItem="VPR-r8-P1f" secondAttribute="centerY" id="84p-Pm-fq8"/>
+                        <constraint firstItem="hXb-13-NMx" firstAttribute="centerX" secondItem="VPR-r8-P1f" secondAttribute="centerX" id="l8O-Wa-hjz"/>
+                    </constraints>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="CIf-dx-AOW">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
@@ -129,11 +148,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="VPR-r8-P1f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Tk-vG-q2J"/>
                 <constraint firstItem="HHL-HF-mOf" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7lQ-oO-2HR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CIf-dx-AOW" secondAttribute="trailing" id="8a4-Zi-Ic7"/>
                 <constraint firstItem="CIf-dx-AOW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Dud-gp-VLf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CIf-dx-AOW" secondAttribute="bottom" id="MU1-RZ-rAC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VPR-r8-P1f" secondAttribute="bottom" id="OQj-8U-btL"/>
                 <constraint firstItem="CIf-dx-AOW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pNM-rP-eAo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VPR-r8-P1f" secondAttribute="trailing" id="w2b-J4-X8q"/>
+                <constraint firstItem="VPR-r8-P1f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zsF-hf-edV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-115.5" y="64.5"/>
