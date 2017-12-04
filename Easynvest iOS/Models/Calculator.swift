@@ -12,25 +12,25 @@ struct Calculator: Codable {
     let investmentParameter: Investment
 
     /// Valor bruto do investimento
-    let grossAmount: Float?
+    let grossAmount: Float
     /// Valor do IR
-    let taxesAmount: Float?
+    let taxesAmount: Float
     /// Valor líquido
-    let netAmount: Float?
+    let netAmount: Float
     /// Rentabilidade bruta
-    let grossAmountProfit: Float?
+    let grossAmountProfit: Float
     /// Rentabilidade líquida
-    let netAmountProfit: Float?
+    let netAmountProfit: Float
     /// Rentabilidade bruta anual
-    let annualGrossRateProfit: Float?
+    let annualGrossRateProfit: Float
     /// Rentabilidade bruta mensal
-    let monthlyGrossRateProfit: Float?
+    let monthlyGrossRateProfit: Float
     /// Rentabilidade bruta diária
-    let dailyGrossRateProfit: Double?
+    let dailyGrossRateProfit: Double
     /// Faixa do IR (%)
-    let taxesRate: Float?
+    let taxesRate: Float
     /// Rentabilidade no período
-    let rateProfit: Double?
+    let rateProfit: Double
     /// Rentabilidade líquida anual
-    let annualNetRateProfit: Float?
+    let annualNetRateProfit: Float
 }
