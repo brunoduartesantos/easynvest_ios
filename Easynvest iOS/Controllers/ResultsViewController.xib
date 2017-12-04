@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController" customModule="Easynvest_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="annualGrossRateProfit" destination="TJt-W9-ZdM" id="8XH-ME-BgG"/>
+                <outlet property="grossAmount" destination="uML-yi-obk" id="fy7-rv-TJT"/>
+                <outlet property="grossAmountProfit" destination="eUw-tJ-sH8" id="Ix6-Mi-eCS"/>
+                <outlet property="grossAmountProfitTitle" destination="pge-oL-5Wk" id="Mnv-vc-6Qu"/>
+                <outlet property="grossAmountTitle" destination="6Uu-Zx-Dx7" id="ZrS-9W-ckw"/>
+                <outlet property="investedAmount" destination="7me-eg-U3c" id="jhZ-E5-Q49"/>
+                <outlet property="maturityDate" destination="nxH-UA-QvD" id="fKn-cC-hQj"/>
+                <outlet property="maturityTotalDays" destination="ueE-ie-Rfg" id="g6I-GL-DPb"/>
+                <outlet property="monthlyGrossRateProfit" destination="x7G-sE-hiq" id="rLo-Lw-dpg"/>
+                <outlet property="netAmount" destination="ztw-Yf-NgX" id="4ZM-Sh-meV"/>
+                <outlet property="rate" destination="HZh-sE-7jr" id="g7s-9S-pQX"/>
+                <outlet property="rateProfit" destination="ySD-ax-Z2n" id="8L7-Z3-U55"/>
+                <outlet property="taxesAmount" destination="kKk-9o-nPK" id="kZb-Y5-SfC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-ck-VNL">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeg-5B-OKL">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado da simulação" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5X-vY-PTv">
+                                    <rect key="frame" x="20" y="20" width="375" height="16"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0000,00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-Zx-Dx7">
+                                    <rect key="frame" x="20" y="41" width="375" height="31.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rendimento total de R$ 00,00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pge-oL-5Wk">
+                                    <rect key="frame" x="20" y="77.5" width="375" height="16"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-Nv-1ey">
+                                    <rect key="frame" x="20" y="133.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor aplicado incialmente" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-5t-HaS">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 2000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7me-eg-U3c">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FIL-I8-j6p">
+                                    <rect key="frame" x="20" y="159.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor bruto do investimento" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-Bg-XpZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uML-yi-obk">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="04I-i8-tyu">
+                                    <rect key="frame" x="20" y="185.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor do rendimento" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoZ-Pd-enc">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUw-tJ-sH8">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iA6-Xa-YOY">
+                                    <rect key="frame" x="20" y="211.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IR sobre o investimento" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-77-W0w">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-9o-nPK">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Q4-ue-wVW">
+                                    <rect key="frame" x="20" y="237.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor líquido do investimento" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-vS-Me5">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-Yf-NgX">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fo7-ao-ALk">
+                                    <rect key="frame" x="20" y="293.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data do resgate" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGK-Xw-kRM">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxH-UA-QvD">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-LY-fSc">
+                                    <rect key="frame" x="20" y="319.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dias corridos" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqL-5m-9eR">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-ie-Rfg">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-OC-waz">
+                                    <rect key="frame" x="20" y="345.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rendimento mensal" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMe-pd-wEE">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-sE-hiq">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0zC-3r-ems">
+                                    <rect key="frame" x="20" y="371.5" width="375" height="34"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentual do CDI do investimento" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSH-Dz-rIj">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="34"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-sE-7jr">
+                                            <rect key="frame" x="-20" y="9" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-6C-tkm">
+                                    <rect key="frame" x="20" y="415.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rentabiidade anual" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epy-Bb-LVh">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySD-ax-Z2n">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rgV-Kc-SlT">
+                                    <rect key="frame" x="20" y="441.5" width="375" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rentabilidade no período" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-0c-1kV">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJt-W9-ZdM">
+                                            <rect key="frame" x="-20" y="0.0" width="0.0" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-sH-1CO" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="487.5" width="375" height="40"/>
+                                    <color key="backgroundColor" red="0.12549019610000001" green="0.78039215689999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hJC-da-RNw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <state key="normal" title="Simular novamente">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="iA6-Xa-YOY" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="0KQ-hF-cNQ"/>
+                                <constraint firstAttribute="trailing" secondItem="GGo-OC-waz" secondAttribute="trailing" constant="20" id="1jj-Ve-OTK"/>
+                                <constraint firstAttribute="trailing" secondItem="1Q4-ue-wVW" secondAttribute="trailing" constant="20" id="3Ae-lm-GD1"/>
+                                <constraint firstItem="rgV-Kc-SlT" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="4vi-2H-Ijx"/>
+                                <constraint firstItem="Yku-sH-1CO" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="5kF-Se-I9z"/>
+                                <constraint firstItem="Yku-sH-1CO" firstAttribute="top" secondItem="rgV-Kc-SlT" secondAttribute="bottom" constant="30" id="6Pl-Db-yGb"/>
+                                <constraint firstItem="GGo-OC-waz" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="8Td-Tk-0ZG"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yku-sH-1CO" secondAttribute="bottom" constant="10" id="9gr-ar-WbB"/>
+                                <constraint firstItem="04I-i8-tyu" firstAttribute="top" secondItem="FIL-I8-j6p" secondAttribute="bottom" constant="10" id="AhL-EP-Bdk"/>
+                                <constraint firstItem="rgV-Kc-SlT" firstAttribute="top" secondItem="ODy-6C-tkm" secondAttribute="bottom" constant="10" id="BzN-Bd-I75"/>
+                                <constraint firstItem="FIL-I8-j6p" firstAttribute="top" secondItem="fhO-Nv-1ey" secondAttribute="bottom" constant="10" id="FqV-Y7-nlh"/>
+                                <constraint firstItem="ODy-6C-tkm" firstAttribute="top" secondItem="0zC-3r-ems" secondAttribute="bottom" constant="10" id="GsD-oM-UyE"/>
+                                <constraint firstAttribute="trailing" secondItem="pge-oL-5Wk" secondAttribute="trailing" constant="20" id="Hsc-Yb-al1"/>
+                                <constraint firstItem="fo7-ao-ALk" firstAttribute="top" secondItem="1Q4-ue-wVW" secondAttribute="bottom" constant="40" id="JI1-bq-5zF"/>
+                                <constraint firstAttribute="trailing" secondItem="iA6-Xa-YOY" secondAttribute="trailing" constant="20" id="KEP-pd-klS"/>
+                                <constraint firstAttribute="trailing" secondItem="fhO-Nv-1ey" secondAttribute="trailing" constant="20" id="LHL-7c-vp7"/>
+                                <constraint firstItem="6Uu-Zx-Dx7" firstAttribute="top" secondItem="N5X-vY-PTv" secondAttribute="bottom" constant="5" id="LiH-zF-6Rx"/>
+                                <constraint firstAttribute="trailing" secondItem="o4i-LY-fSc" secondAttribute="trailing" constant="20" id="Oud-Er-GYH"/>
+                                <constraint firstAttribute="trailing" secondItem="N5X-vY-PTv" secondAttribute="trailing" constant="20" id="PEd-cN-ewH"/>
+                                <constraint firstItem="fhO-Nv-1ey" firstAttribute="top" secondItem="pge-oL-5Wk" secondAttribute="bottom" constant="40" id="S9V-MZ-Pb2"/>
+                                <constraint firstItem="1Q4-ue-wVW" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="SA3-s5-J4e"/>
+                                <constraint firstItem="N5X-vY-PTv" firstAttribute="top" secondItem="oeg-5B-OKL" secondAttribute="top" constant="20" id="Ti6-dy-H68"/>
+                                <constraint firstItem="1Q4-ue-wVW" firstAttribute="top" secondItem="iA6-Xa-YOY" secondAttribute="bottom" constant="10" id="Uhr-Ac-Vt0"/>
+                                <constraint firstItem="fo7-ao-ALk" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="WS5-Ie-wzA"/>
+                                <constraint firstAttribute="trailing" secondItem="0zC-3r-ems" secondAttribute="trailing" constant="20" id="Ykg-6K-83R"/>
+                                <constraint firstItem="N5X-vY-PTv" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="YrY-Tu-VPf"/>
+                                <constraint firstItem="iA6-Xa-YOY" firstAttribute="top" secondItem="04I-i8-tyu" secondAttribute="bottom" constant="10" id="Yxm-l2-KU9"/>
+                                <constraint firstAttribute="trailing" secondItem="ODy-6C-tkm" secondAttribute="trailing" constant="20" id="aMz-Nv-3Uu"/>
+                                <constraint firstItem="FIL-I8-j6p" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="axO-qk-jxH"/>
+                                <constraint firstItem="o4i-LY-fSc" firstAttribute="top" secondItem="fo7-ao-ALk" secondAttribute="bottom" constant="10" id="c6a-Br-Oel"/>
+                                <constraint firstItem="0zC-3r-ems" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="d7x-uW-Bhk"/>
+                                <constraint firstItem="04I-i8-tyu" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="eUe-Dh-rmu"/>
+                                <constraint firstItem="ODy-6C-tkm" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="fZK-7p-hGz"/>
+                                <constraint firstAttribute="trailing" secondItem="FIL-I8-j6p" secondAttribute="trailing" constant="20" id="fj7-c1-hhd"/>
+                                <constraint firstAttribute="trailing" secondItem="04I-i8-tyu" secondAttribute="trailing" constant="20" id="g9V-pW-0V5"/>
+                                <constraint firstItem="o4i-LY-fSc" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="hgp-oR-LBz"/>
+                                <constraint firstItem="pge-oL-5Wk" firstAttribute="top" secondItem="6Uu-Zx-Dx7" secondAttribute="bottom" constant="5" id="jw2-3F-USn"/>
+                                <constraint firstAttribute="trailing" secondItem="rgV-Kc-SlT" secondAttribute="trailing" constant="20" id="nXi-UK-zhb"/>
+                                <constraint firstItem="pge-oL-5Wk" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="pEL-Wi-3ZT"/>
+                                <constraint firstItem="0zC-3r-ems" firstAttribute="top" secondItem="GGo-OC-waz" secondAttribute="bottom" constant="10" id="qYK-a4-ksJ"/>
+                                <constraint firstAttribute="trailing" secondItem="6Uu-Zx-Dx7" secondAttribute="trailing" constant="20" id="uz6-sA-1P6"/>
+                                <constraint firstItem="GGo-OC-waz" firstAttribute="top" secondItem="o4i-LY-fSc" secondAttribute="bottom" constant="10" id="wB6-Ey-iIF"/>
+                                <constraint firstItem="6Uu-Zx-Dx7" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="wfB-Dh-YDL"/>
+                                <constraint firstItem="fhO-Nv-1ey" firstAttribute="leading" secondItem="oeg-5B-OKL" secondAttribute="leading" constant="20" id="xz7-wR-tui"/>
+                                <constraint firstAttribute="trailing" secondItem="Yku-sH-1CO" secondAttribute="trailing" constant="20" id="zRv-So-Gu9"/>
+                                <constraint firstAttribute="trailing" secondItem="fo7-ao-ALk" secondAttribute="trailing" constant="20" id="zc4-6f-XjH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="oeg-5B-OKL" firstAttribute="height" secondItem="gCT-ck-VNL" secondAttribute="height" priority="250" id="Mun-n5-QFT"/>
+                        <constraint firstAttribute="bottom" secondItem="oeg-5B-OKL" secondAttribute="bottom" id="NE2-Ob-E0g"/>
+                        <constraint firstItem="oeg-5B-OKL" firstAttribute="top" secondItem="gCT-ck-VNL" secondAttribute="top" id="OjO-nY-v2R"/>
+                        <constraint firstAttribute="trailing" secondItem="oeg-5B-OKL" secondAttribute="trailing" id="hAL-ht-GG4"/>
+                        <constraint firstItem="oeg-5B-OKL" firstAttribute="leading" secondItem="gCT-ck-VNL" secondAttribute="leading" id="zsc-16-vIv"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gCT-ck-VNL" secondAttribute="bottom" id="MHe-oK-4E6"/>
+                <constraint firstItem="oeg-5B-OKL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="WUp-7f-ZLA"/>
+                <constraint firstItem="gCT-ck-VNL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lC5-l6-tdo"/>
+                <constraint firstItem="gCT-ck-VNL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vsQ-uA-g9Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gCT-ck-VNL" secondAttribute="trailing" id="yKQ-Y4-J4E"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

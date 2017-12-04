@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F50431AAC054AA0A9F41FF6 /* Pods_Easynvest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172918834609D2A89D01388D /* Pods_Easynvest_iOS.framework */; };
+		C3883A5D1FD4A5B7008A49E8 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */; };
+		C3883A5E1FD4A5B7008A49E8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */; };
 		C3ACB3101FD47B910035049B /* Investment+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB30F1FD47B910035049B /* Investment+Requests.swift */; };
 		C3ACB3121FD482C40035049B /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB3111FD482C40035049B /* Investment.swift */; };
 		C3C759061FD30DB600AED5AE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759041FD307EC00AED5AE /* TextField.swift */; };
@@ -36,6 +38,8 @@
 		172918834609D2A89D01388D /* Pods_Easynvest_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easynvest_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C06F5624B9A498AA43EFDE /* Pods-Easynvest iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B10AFB3920286E210E9CE595 /* Pods-Easynvest iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		C3ACB30F1FD47B910035049B /* Investment+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investment+Requests.swift"; sourceTree = "<group>"; };
 		C3ACB3111FD482C40035049B /* Investment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
 		C3C759041FD307EC00AED5AE /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			children = (
 				C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */,
 				C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */,
+				C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */,
+				C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				C3CD2CAB1FD1A87A004C9B01 /* LaunchScreen.storyboard in Resources */,
 				C3CD2CA81FD1A87A004C9B01 /* Assets.xcassets in Resources */,
 				C3F766311FD2285C00E5122F /* SimulateViewController.xib in Resources */,
+				C3883A5E1FD4A5B7008A49E8 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +371,7 @@
 				C3ACB3121FD482C40035049B /* Investment.swift in Sources */,
 				C3ACB3101FD47B910035049B /* Investment+Requests.swift in Sources */,
 				C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */,
+				C3883A5D1FD4A5B7008A49E8 /* ResultsViewController.swift in Sources */,
 				C3F766301FD2285C00E5122F /* SimulateViewController.swift in Sources */,
 				C3C7590A1FD31E6000AED5AE /* Calculator.swift in Sources */,
 				C3C759081FD317BA00AED5AE /* Button.swift in Sources */,

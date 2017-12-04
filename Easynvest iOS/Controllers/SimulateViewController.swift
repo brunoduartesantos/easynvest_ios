@@ -42,7 +42,12 @@ class SimulateViewController: UIViewController {
             rate: rate,
             isTaxFree: false)
 
-        investment.simulate(completion: nil)
+        investment.simulate { (calculator) in
+            guard let calculator = calculator else { return }
+
+            let resultController = ResultsViewController(calculator: calculator)
+            self.navigationController?.pushViewController(resultController, animated: true)
+        }
     }
 
     @IBAction func textFieldEditingDidBegin(_ sender: TextField) {
