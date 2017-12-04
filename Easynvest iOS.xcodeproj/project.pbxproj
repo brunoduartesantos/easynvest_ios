@@ -10,12 +10,22 @@
 		7F50431AAC054AA0A9F41FF6 /* Pods_Easynvest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172918834609D2A89D01388D /* Pods_Easynvest_iOS.framework */; };
 		C3883A5D1FD4A5B7008A49E8 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */; };
 		C3883A5E1FD4A5B7008A49E8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */; };
+		C3883A621FD4F1F0008A49E8 /* InvestimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3883A611FD4F1F0008A49E8 /* InvestimentTests.swift */; };
+		C3883A631FD4F1FA008A49E8 /* Investment+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB30F1FD47B910035049B /* Investment+Requests.swift */; };
+		C3883A641FD4F1FD008A49E8 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB3111FD482C40035049B /* Investment.swift */; };
+		C3883A651FD4F200008A49E8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759091FD31E6000AED5AE /* Calculator.swift */; };
+		C3883A661FD4F204008A49E8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759041FD307EC00AED5AE /* TextField.swift */; };
+		C3883A671FD4F207008A49E8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759071FD317BA00AED5AE /* Button.swift */; };
+		C3883A681FD4F20A008A49E8 /* SimulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7662E1FD2285C00E5122F /* SimulateViewController.swift */; };
+		C3883A691FD4F20E008A49E8 /* SimulateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F7662F1FD2285C00E5122F /* SimulateViewController.xib */; };
+		C3883A6A1FD4F212008A49E8 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */; };
+		C3883A6B1FD4F216008A49E8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */; };
+		C3883A6C1FD4F219008A49E8 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759141FD385D800AED5AE /* StringHelper.swift */; };
 		C3ACB3101FD47B910035049B /* Investment+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB30F1FD47B910035049B /* Investment+Requests.swift */; };
 		C3ACB3121FD482C40035049B /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACB3111FD482C40035049B /* Investment.swift */; };
 		C3C759061FD30DB600AED5AE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759041FD307EC00AED5AE /* TextField.swift */; };
 		C3C759081FD317BA00AED5AE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759071FD317BA00AED5AE /* Button.swift */; };
 		C3C7590A1FD31E6000AED5AE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759091FD31E6000AED5AE /* Calculator.swift */; };
-		C3C759111FD32E3200AED5AE /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759101FD32E3200AED5AE /* CalculatorTests.swift */; };
 		C3C759151FD385D900AED5AE /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C759141FD385D800AED5AE /* StringHelper.swift */; };
 		C3CD2CA11FD1A87A004C9B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */; };
 		C3CD2CA81FD1A87A004C9B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CD2CA71FD1A87A004C9B01 /* Assets.xcassets */; };
@@ -40,12 +50,12 @@
 		B10AFB3920286E210E9CE595 /* Pods-Easynvest iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easynvest iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easynvest iOS/Pods-Easynvest iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C3883A5B1FD4A5B7008A49E8 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C3883A5C1FD4A5B7008A49E8 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		C3883A611FD4F1F0008A49E8 /* InvestimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentTests.swift; sourceTree = "<group>"; };
 		C3ACB30F1FD47B910035049B /* Investment+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investment+Requests.swift"; sourceTree = "<group>"; };
 		C3ACB3111FD482C40035049B /* Investment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
 		C3C759041FD307EC00AED5AE /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		C3C759071FD317BA00AED5AE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		C3C759091FD31E6000AED5AE /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		C3C759101FD32E3200AED5AE /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		C3C759141FD385D800AED5AE /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		C3CD2C9D1FD1A87A004C9B01 /* Easynvest iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easynvest iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CD2CA01FD1A87A004C9B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +129,7 @@
 		C3C7590F1FD32DC200AED5AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C3C759101FD32E3200AED5AE /* CalculatorTests.swift */,
+				C3883A611FD4F1F0008A49E8 /* InvestimentTests.swift */,
 			);
 			name = Models;
 			path = "New Group";
@@ -292,6 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3883A691FD4F20E008A49E8 /* SimulateViewController.xib in Resources */,
+				C3883A6B1FD4F216008A49E8 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +394,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3C759111FD32E3200AED5AE /* CalculatorTests.swift in Sources */,
+				C3883A631FD4F1FA008A49E8 /* Investment+Requests.swift in Sources */,
+				C3883A671FD4F207008A49E8 /* Button.swift in Sources */,
+				C3883A651FD4F200008A49E8 /* Calculator.swift in Sources */,
+				C3883A6C1FD4F219008A49E8 /* StringHelper.swift in Sources */,
+				C3883A641FD4F1FD008A49E8 /* Investment.swift in Sources */,
+				C3883A681FD4F20A008A49E8 /* SimulateViewController.swift in Sources */,
+				C3883A661FD4F204008A49E8 /* TextField.swift in Sources */,
+				C3883A621FD4F1F0008A49E8 /* InvestimentTests.swift in Sources */,
+				C3883A6A1FD4F212008A49E8 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +576,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EDAB2R5726;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				INFOPLIST_FILE = "Easynvest iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Burno.Easynvest-iOSTests";
@@ -575,7 +595,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EDAB2R5726;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				INFOPLIST_FILE = "Easynvest iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Burno.Easynvest-iOSTests";
