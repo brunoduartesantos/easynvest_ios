@@ -66,4 +66,38 @@ extension String {
 
         return newString
     }
+
+    static func floatToCurrecyString(_ value: Float) -> String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "pt-BR")
+        formatter.numberStyle = .currency
+
+        if let formattedValue = formatter.string(from: value as NSNumber) {
+            return formattedValue
+        } else {
+            return ""
+        }
+    }
+
+    /// Format a string from this format "yyyy-MM-dd'T'hh:mm:ss" to this "dd/MM/yyyy" format
+    func formatToDisplayDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss"
+        dateFormatter.locale = Locale(identifier: "pt-BR")
+
+        guard let dateObj = dateFormatter.date(from: self) else { return "" }
+
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: dateObj)
+    }
+
+    /// Format a float value to this format (00,0%)
+    static func floatToPercentageString(_ value: Float) -> String {
+        return (String(format: "%.2f", value) + "%").replacingOccurrences(of: ".", with: ",")
+    }
+
+    /// Format a double value to this format (00,0%)
+    static func doubleToPercentageString(_ value: Double) -> String {
+        return (String(format: "%.2f", value) + "%").replacingOccurrences(of: ".", with: ",")
+    }
 }

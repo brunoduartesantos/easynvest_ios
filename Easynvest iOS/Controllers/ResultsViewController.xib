@@ -243,7 +243,7 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-sH-1CO" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-sH-1CO" customClass="Button" customModule="Easynvest_iOS" customModuleProvider="target">
                                     <rect key="frame" x="20" y="487.5" width="375" height="40"/>
                                     <color key="backgroundColor" red="0.12549019610000001" green="0.78039215689999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -253,6 +253,9 @@
                                     <state key="normal" title="Simular novamente">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="simulateAgain:" destination="-1" eventType="touchUpInside" id="hzx-Fg-eIV"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
